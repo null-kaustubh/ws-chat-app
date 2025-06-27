@@ -94,8 +94,8 @@ A modern, real-time chat application built with Node.js, WebSockets, React, and 
 
 ### Leaving a Room
 
-- Click the "Leave Room" button to exit the current room
-- You'll be redirected to the main lobby
+1. Click the "Leave Room" button to exit the current room
+2. You'll be redirected to the main lobby
 
 ## 📝 License
 
