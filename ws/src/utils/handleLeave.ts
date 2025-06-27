@@ -31,6 +31,7 @@ export default function handleLeaveRoom(socket: WebSocket) {
         roomId: currentRoom,
         message: "A user left the room",
         timestamp: new Date().toISOString(),
+        userCount: roomSockets ? roomSockets.size : 0,
       },
       socket
     );

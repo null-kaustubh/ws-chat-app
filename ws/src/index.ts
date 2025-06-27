@@ -1,4 +1,4 @@
-import { WebSocketServer, WebSocket } from "ws";
+import { WebSocketServer } from "ws";
 import handleJoinRoom from "./utils/handleJoin";
 import handleChatMessage from "./utils/handleChat";
 import handleLeaveRoom from "./utils/handleLeave";

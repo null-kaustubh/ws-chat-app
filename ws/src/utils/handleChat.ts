@@ -16,11 +16,15 @@ export default function handleChatMessage(socket: WebSocket, message: string) {
     return;
   }
 
-  // Broadcast message to all user's in the room
-  broadcastToRoom(room, {
-    type: "chat",
-    message: message,
-    roomId: room,
-    timestamp: new Date().toISOString(),
-  });
+  // Broadcast message to all user's in the room (excluding sender)
+  broadcastToRoom(
+    room,
+    {
+      type: "chat",
+      message: message,
+      roomId: room,
+      timestamp: new Date().toISOString(),
+    },
+    socket
+  );
 }

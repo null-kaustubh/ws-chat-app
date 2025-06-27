@@ -23,6 +23,7 @@ export default function handleJoinRoom(socket: WebSocket, roomId: string) {
       roomId: roomId,
       message: `You joined ${roomId}`,
       timestamp: new Date().toISOString(),
+      userCount: roomToSockets.get(roomId)!.size,
     })
   );
 
@@ -34,6 +35,7 @@ export default function handleJoinRoom(socket: WebSocket, roomId: string) {
       roomId: roomId,
       message: "A user joined the room",
       timestamp: new Date().toISOString(),
+      userCount: roomToSockets.get(roomId)!.size,
     },
     socket
   );
